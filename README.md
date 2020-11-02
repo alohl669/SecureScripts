@@ -7,7 +7,12 @@ SecureScripts is a small set of tools designed to monitor some basic system func
 ```
 Usage:  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r]] 
         ./showCommands.sh [-h]
-Description: showCommands is a tool to discover the processes that go in and out of execution. This is useful for identifying vulnerabilities and/or malicious applications. One of its most useful examples is for discovering CRON processes. The tool has the ability to use exclusion and inclusion filters and the ability to add and remove them easily. If a more detailed edition is desired, the txt files that are created can be modified.
+Description: showCommands is a tool to discover the processes that go in 
+and out of execution. This is useful for identifying vulnerabilities and/or 
+malicious applications. One of its most useful examples is for discovering 
+CRON processes. The tool has the ability to use exclusion and inclusion 
+filters and the ability to add and remove them easily. If a more detailed 
+edition is desired, the txt files that are created can be modified.
 
         -b      See excluded filters 
         -w      See filters included 

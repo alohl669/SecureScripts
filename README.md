@@ -14,21 +14,19 @@ git clone https://github.com/alohl669/SecureScripts.git
 cd SecureScripts/showCommands
 ```
 
+### Description
+
+showCommands is a tool to discover the processes that go in and out of execution. This is useful for identifying vulnerabilities and/or malicious applications. One of its most useful examples is for discovering CRON processes. The tool has the ability to use exclusion and inclusion filters and the ability to add and remove them easily. If a more detailed edition is desired, the txt files that are created can be modified.
+
 ### usage
 ```
 Usage:  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r] | [-d]] 
         ./showCommands.sh [-h]
-Description: showCommands is a tool to discover the processes that go in 
-and out of execution. This is useful for identifying vulnerabilities and/or 
-malicious applications. One of its most useful examples is for discovering 
-CRON processes. The tool has the ability to use exclusion and inclusion 
-filters and the ability to add and remove them easily. If a more detailed 
-edition is desired, the txt files that are created can be modified.
 
         -b      See excluded filters 
         -w      See filters included 
-        -a      Adds a filter to inclusion list. [showCommands.sh -a <filtro>]
-        -e      Adds a filter to exclusion list. [showCommands.sh -e <filtro>]
+        -a      Adds a filter to inclusion list. [showCommands.sh -a <filter>]
+        -e      Adds a filter to exclusion list. [showCommands.sh -e <filter>]
         -r      Remove all filters
         -d      Document the output in a "report.txt" file
         -h      help 

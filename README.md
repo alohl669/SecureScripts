@@ -5,7 +5,7 @@ SecureScripts is a small set of tools designed to monitor some basic system func
 ## showCommands
 
 ```
-Usage:  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r]] 
+Usage:  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r] | [-d]] 
         ./showCommands.sh [-h]
 Description: showCommands is a tool to discover the processes that go in 
 and out of execution. This is useful for identifying vulnerabilities and/or 
@@ -19,6 +19,7 @@ edition is desired, the txt files that are created can be modified.
         -a      Adds a filter to inclusion list. [showCommands.sh -a <filtro>]
         -e      Adds a filter to exclusion list. [showCommands.sh -e <filtro>]
         -r      Remove all filters
+        -d      Document the output in a "report.txt" file
         -h      help 
 
 Examples: if we wanted to simply look for only those processes executed by CRON, we would simply need

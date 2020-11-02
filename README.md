@@ -44,6 +44,6 @@ Examples: if we wanted to simply look for only those processes executed by CRON,
 Simple file search with SUID bit and GTFOBINS references
 
 ```
-cd SecureScripts/suidFinder \
+cd SecureScripts/suidFinder && \
 ./suidFinder.sh
 ```

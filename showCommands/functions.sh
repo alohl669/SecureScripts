@@ -30,17 +30,29 @@ function Filters () {
 
 function BucleCommands () {
 	# Creamos un bucle infito que revise los comandos
-	while true; do
-		cronTasksNew=$(ps -eo command)
 		if [[ $boolFiltroExcluidos = false && $boolFiltroIncluidos = false ]]; then
-            diff <(echo "$cronTasks") <(echo "$cronTasksNew") | grep "[\>\<]"
+            while true; do
+                cronTasksNew=$(ps -eo command)
+                diff <(echo "$cronTasks") <(echo "$cronTasksNew") | grep "[\>\<]"
+                cronTasks=$cronTasksNew
+            done
         elif [[ $boolFiltroExcluidos = true && $boolFiltroIncluidos = false ]]; then
-            diff <(echo "$cronTasks") <(echo "$cronTasksNew") | eval $filtroExcluidos | grep "[\>\<]"
+            while true; do
+                cronTasksNew=$(ps -eo command)
+                diff <(echo "$cronTasks") <(echo "$cronTasksNew") | eval $filtroExcluidos | grep "[\>\<]"
+                cronTasks=$cronTasksNew
+            done
         elif [[ $boolFiltroExcluidos = false && $boolFiltroIncluidos = true ]]; then
-            diff <(echo "$cronTasks") <(echo "$cronTasksNew") | eval $filtroIncluidos | grep "[\>\<]"
+            while true; do
+                cronTasksNew=$(ps -eo command)
+                diff <(echo "$cronTasks") <(echo "$cronTasksNew") | eval $filtroIncluidos | grep "[\>\<]"
+                cronTasks=$cronTasksNew
+            done
         else
-            diff <(echo "$cronTasks") <(echo "$cronTasksNew") | eval $filtroExcluidos | eval $filtroIncluidos | grep "[\>\<]"
+            while true; do
+                cronTasksNew=$(ps -eo command)
+                diff <(echo "$cronTasks") <(echo "$cronTasksNew") | eval $filtroExcluidos | eval $filtroIncluidos | grep "[\>\<]"
+                cronTasks=$cronTasksNew
+            done
         fi
-		cronTasks=$cronTasksNew
-	done
 }

@@ -10,16 +10,16 @@ else
     echo "everything ok"
 fi
 
-declare -a userList
-passwdList=($(cat -T /etc/passwd | tr " " "*"))
-# echo ${passwdList[@]}
-for((i=0;i<${#passwdList[@]};i++)); do
-    IFS=':'
-    read -a usrLst <<< "${passwdList[i]}"
-    userList+=(${usrLst[0]})
-done
+# declare -a userList
+# passwdList=($(cat -T /etc/passwd | tr " " "*"))
+# # echo ${passwdList[@]}
+# for((i=0;i<${#passwdList[@]};i++)); do
+#     IFS=':'
+#     read -a usrLst <<< "${passwdList[i]}"
+#     userList+=(${usrLst[0]})
+# done
 
 
 
 
-echo "usuarios: ${userList[@]}"
+# echo "usuarios: ${userList[@]}"

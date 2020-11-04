@@ -36,6 +36,7 @@ Examples: if we wanted to simply look for only those processes executed by CRON,
 ./showCommands.sh
 
 ```
+> The application is based on an infinite loop and as a consequence brings with it an excessive consumption of CPU, we will have to look for alternatives
 
 ## suidFinder
 
@@ -44,4 +45,13 @@ Simple file search with SUID bit and GTFOBINS references
 ```
 cd SecureScripts/suidFinder && \
 ./suidFinder.sh
+```
+
+## shFinder
+
+Simple search for *.sh scripts of privileged users with wrongly set permissions
+
+```
+cd SecureScripts/shFinder && \
+./shFinder.sh
 ```

@@ -25,10 +25,10 @@ while getopts "bwa:e:rdh" option;
         date > report.txt
         echo "--------------------------" >> report.txt
         echo "Lista de filtros Incluidos" >> report.txt
-        echo $incluidos >> report.txt
+        echo ${incluidos[@]} >> report.txt
         echo "" >> report.txt
         echo "Lista de filtros excluidos" >> report.txt
-        echo $excluidos >> report.txt
+        echo ${excluidos[@]} >> report.txt
         echo "--------------------------" >> report.txt
         echo "" >> report.txt
         Filters

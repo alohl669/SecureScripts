@@ -16,7 +16,7 @@ But this would not be the only file that would involve a risk. In the class vide
 ![no pass for passwd - 2](img/byebyepasswd2.png)
 ![no pass for passwd - 3](img/imrootwithoutpasswd.png)
 
-3. Since we have mentioned the danger of a missing password for the root user, let's check again if this would happen in the same way with the ```/etc/shadow``` file
+3. Since we have mentioned the danger of a missing password for the root user, let's check again if this would happen in the same way with the ```/etc/shadow``` file  
 ![no pass for shadow - 1](img/byebyeshadow.png)
 ![no pass for shadow - 2](img/imrootwithoutshadow.png)
 

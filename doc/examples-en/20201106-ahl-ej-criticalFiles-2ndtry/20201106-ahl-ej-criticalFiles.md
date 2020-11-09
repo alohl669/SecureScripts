@@ -22,7 +22,7 @@ But this would not be the only file that would involve a risk. In the class vide
 
 **BINGO!**
 
-4. Finally there is the file ```/etc/gshadow``` (not ```/etc/group```). Normally you would think that not all files owned by root are manipulable by the root group (shadow does not write to the root group). But this is where the ```/etc/sudoers``` file comes in again. I explain myself, before I have mentioned how to modify sudoers to obtain sudo privileges with a single user, however, in modern distributions (this same distribution or centos 8) they already begin to come with a peculiar configuration in sudoers to avoid visudo, etc. If we look at parrot sudoers we see the following
+4. Finally there is the file ```/etc/gshadow``` (not ```/etc/group```). Normally you would think that not all files owned by root are manipulable by the root group (shadow does not write to the root group). But this is where the ```/etc/sudoers``` file comes in again. I explain myself, before I have mentioned how to modify sudoers to obtain sudo privileges with a single user, however, in modern distributions (this same distribution or centos 8) they already begin to come with a peculiar configuration in sudoers to avoid visudo, etc. If we look at parrot sudoers we see the following  
 ![sudo group](img/sudogroup.png)
 
 ```%sudo    ALL=(ALL:ALL)  ALL```

@@ -1,17 +1,17 @@
-# SecureScripts
+# secureScripts
 
-SecureScripts is a small set of tools designed to monitor some basic system functions and locate possible vulnerabilities. This set of tools is based on pentesting techniques for learning reasons
+secureScripts is a small set of tools designed to monitor some basic system functions and locate possible vulnerabilities. This set of tools is based on pentesting techniques for learning reasons
 
 ## Install
 
 ```
-git clone https://github.com/alohl669/SecureScripts.git
+git clone https://github.com/alohl669/secureScripts.git
 ```
 
 ## showCommands
 
 ```
-cd SecureScripts/showCommands
+cd secureScripts/scripts/showCommands
 ```
 
 ### Description
@@ -43,7 +43,7 @@ Examples: if we wanted to simply look for only those processes executed by CRON,
 Simple file search with SUID bit and GTFOBINS references
 
 ```
-cd SecureScripts/suidFinder && \
+cd secureScripts/scripts/suidFinder && \
 ./suidFinder.sh
 ```
 
@@ -52,6 +52,14 @@ cd SecureScripts/suidFinder && \
 Simple search for *.sh scripts of privileged users with wrongly set permissions
 
 ```
-cd SecureScripts/shFinder && \
+cd secureScripts/scripts/shFinder && \
 ./shFinder.sh
+```
+## capFinder
+
+Simple capabilities search engine
+
+```
+cd secureScripts/scripts/capFinder && \
+./capFinder.sh
 ```

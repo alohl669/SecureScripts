@@ -26,7 +26,8 @@ cd secureScripts/scripts/showCommands
 ```
 
 
-**Usage:**  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r] | [-d]] 
+**Usage:**  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r] | [-d]]  
+```
         ./showCommands.sh [-h]
 
         -b      See excluded filters 
@@ -35,7 +36,9 @@ cd secureScripts/scripts/showCommands
         -e      Adds a filter to exclusion list. [showCommands.sh -e <filter>]
         -r      Remove all filters
         -d      Document the output in a "report.txt" file
-        -h      help 
+        -h      help  
+```  
+
 
 **Examples:** if we wanted to simply look for only those processes executed by CRON, we would simply need
 ```

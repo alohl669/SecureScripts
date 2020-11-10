@@ -2,6 +2,10 @@
 
 secureScripts is a small set of tools designed to monitor some basic system functions and locate possible vulnerabilities. This set of tools is based on pentesting techniques for learning reasons
 
+## Requirements
+- nmap
+- openSSL
+
 ## Install
 
 ```
@@ -63,3 +67,5 @@ Simple capabilities search engine
 cd secureScripts/scripts/capFinder && \
 ./capFinder.sh
 ```
+
+<!-- TODO netAliases -->

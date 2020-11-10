@@ -26,7 +26,7 @@ cd secureScripts/scripts/showCommands
 ```
 
 
-**Usage:**  ./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r] | [-d]]  
+**Usage:**  ```./showCommands.sh [[-h] | [-b] | [-w] | [-a] | [-e] | [-r] | [-d]]```  
 ```
         ./showCommands.sh [-h]
 

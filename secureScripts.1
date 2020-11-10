@@ -4,9 +4,14 @@
 .hy
 .SH secureScripts
 .PP
-secureScripts is a small set of tools designed to monitor some basic
-system functions and locate possible vulnerabilities.
+secureScripts is a small set of tools for linux, designed to monitor
+some basic system functions and locate possible vulnerabilities.
 This set of tools is based on pentesting techniques for learning reasons
+.SS Requirements
+.IP \[bu] 2
+nmap
+.IP \[bu] 2
+openSSL
 .SS Install
 .IP
 .nf
@@ -14,14 +19,14 @@ This set of tools is based on pentesting techniques for learning reasons
 git clone https://github.com/alohl669/secureScripts.git
 \f[R]
 .fi
-.SS showCommands
+.SS man Page
 .IP
 .nf
 \f[C]
-cd secureScripts/scripts/showCommands
+man ./secureScripts.1
 \f[R]
 .fi
-.SS Description
+.SS showCommands
 .PP
 showCommands is a tool to discover the processes that go in and out of
 execution.
@@ -32,22 +37,33 @@ The tool has the ability to use exclusion and inclusion filters and the
 ability to add and remove them easily.
 If a more detailed edition is desired, the txt files that are created
 can be modified.
-.SS usage
 .IP
 .nf
 \f[C]
-Usage:  ./showCommands.sh [[\-h] | [\-b] | [\-w] | [\-a] | [\-e] | [\-r] | [\-d]] 
-        ./showCommands.sh [\-h]
-
-        \-b      See excluded filters 
-        \-w      See filters included 
-        \-a      Adds a filter to inclusion list. [showCommands.sh \-a <filter>]
-        \-e      Adds a filter to exclusion list. [showCommands.sh \-e <filter>]
-        \-r      Remove all filters
-        \-d      Document the output in a \[dq]report.txt\[dq] file
-        \-h      help 
-
-Examples: if we wanted to simply look for only those processes executed by CRON, we would simply need
+cd secureScripts/scripts/showCommands
+\f[R]
+.fi
+.PP
+\f[B]Usage:\f[R] ./showCommands.sh [[\-h] | [\-b] | [\-w] | [\-a] |
+[\-e] | [\-r] | [\-d]] ./showCommands.sh [\-h]
+.IP
+.nf
+\f[C]
+    \-b      See excluded filters 
+    \-w      See filters included 
+    \-a      Adds a filter to inclusion list. [showCommands.sh \-a <filter>]
+    \-e      Adds a filter to exclusion list. [showCommands.sh \-e <filter>]
+    \-r      Remove all filters
+    \-d      Document the output in a \[dq]report.txt\[dq] file
+    \-h      help 
+\f[R]
+.fi
+.PP
+\f[B]Examples:\f[R] if we wanted to simply look for only those processes
+executed by CRON, we would simply need
+.IP
+.nf
+\f[C]
 \&./showCommands.sh \-a CRON
 \&./showCommands.sh
 \f[R]
@@ -89,3 +105,21 @@ cd secureScripts/scripts/capFinder && \[rs]
 \&./capFinder.sh
 \f[R]
 .fi
+.SS netAliases
+.PP
+Target recognition tools
+.IP
+.nf
+\f[C]
+cd secureScripts/scripts/netAliases && \[rs]
+\&./netAliases.sh
+\f[R]
+.fi
+.PP
+\f[B]++TODO++:\f[R] Hay que ir pensando en volver a refactorizar, debe
+convertirse en herramientas que cargas, no en una aplicaci\['o]n que
+ejecutas
+.PD 0
+.P
+.PD
+\f[B]+TODO+\f[R] inducir alias en rc

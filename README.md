@@ -22,6 +22,7 @@ secureScripts
 ```
 man ./secureScripts.1
 ```
+Only in secureScripts's directory, would require sudo and "we are not yet"
 
 ### lssuid
 
@@ -85,6 +86,3 @@ Target recognition tools
 cd secureScripts/scripts/netAliases && \
 ./netAliases.sh
 ```
-
-**++TODO++:** Hay que ir pensando en volver a refactorizar, debe convertirse en herramientas que cargas, no en una aplicación que ejecutas  
-**+TODO+** inducir alias en rc  

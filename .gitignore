@@ -3,3 +3,4 @@ whiteList.txt
 *report.txt
 *.pdf
 allPorts.txt
+main.sh

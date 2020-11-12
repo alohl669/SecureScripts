@@ -1,12 +1,10 @@
 #!/bin/bash
-execSecuresNoinstalled () {
-        echo ""
-        echo "  [*] secureScripts"
-        echo "      [*] lssuid"
-        echo "      [*] lssh"
-        echo "      [*] lscap"
-        echo ""
-        . SECDIR/scripts/lssuid/lssuid.sh
-        . SECDIR/scripts/lssh/lssh.sh
-        . SECDIR/scripts/lscap/lscap.sh
-}
+echo ""
+echo "  [*] secureScripts"
+echo "      [*] lssuid"
+echo "      [*] lssh"
+echo "      [*] lscap"
+echo ""
+. SECDIR/scripts/lssuid/lssuid.sh
+. SECDIR/scripts/lssh/lssh.sh
+. SECDIR/scripts/lscap/lscap.sh

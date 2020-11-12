@@ -24,13 +24,18 @@ execSecuresNoinstalled () {
     . $PWD/scripts/lscap/lscap.sh
 }
 
+thanks () {
+    echo "      [i] Great, just type 'secureScripts' in a new terminal to source commands"
+}
+
 createMain () {
-    
+    sed "s|SECDIR|$PWD|g" main.sh.bk > main.sh
 }
 
 installSecures () {
-    if [[ $(cat ~/.bashrc | grep -o secureScripts.sh) = "secureScripts.sh" ]]; then
+    if [[ $(cat ~/.bashrc | grep -o main.sh) = "main.sh" ]]; then
         installedSecures="true"
+        execSecuresNoinstalled
     else
         echo ""
         echo "  [*] secureScripts"
@@ -71,12 +76,16 @@ installSecures () {
             execSecuresNoinstalled
             ;;
             y) echo Yes
-            echo "alias secureScripts='. $PWD/secureScripts.sh'" >> /home/$USER/test.txt
+            echo "alias secureScripts='source $PWD/main.sh'" >> /home/$USER/.bashrc
+            createMain
             installedSecures="true"
+            thanks
             ;;
             Y) echo Yes
-            echo "alias secureScripts='. $PWD/secureScripts.sh'" >> /home/$USER/test.txt
+            echo "alias secureScripts='source $PWD/main.sh'" >> /home/$USER/.bashrc
+            createMain
             installedSecures="true"
+            thanks
             ;;
             *) 
             echo ""

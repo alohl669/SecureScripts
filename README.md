@@ -10,7 +10,11 @@ secureScripts is a small set of tools for linux, designed to monitor some basic 
 
 ```
 git clone https://github.com/alohl669/secureScripts.git
-. secureScripts/aliases.sh
+. secureScripts/secureScripts.sh
+```
+secureScripts is intended to act as a support, it is just a set of aliases and functions that you can install in your .bashrc(you will be asked every time you run secureScripts.sh). Once installed on your .bashrc you will only have to type "secureScripts" to load it in its entirety. We don't want it to load every session, just when you need it, so you will have to use the initial alias.
+```
+secureScripts
 ```
 
 ## man Page

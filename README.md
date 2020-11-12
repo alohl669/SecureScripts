@@ -10,12 +10,36 @@ secureScripts is a small set of tools for linux, designed to monitor some basic 
 
 ```
 git clone https://github.com/alohl669/secureScripts.git
+. secureScripts/aliases.sh
 ```
 
 ## man Page
 
 ```
 man ./secureScripts.1
+```
+
+### lssuid
+
+List of files with SUID bit and GTFOBINS references
+
+```
+lssuid
+```
+### lssh
+
+List *sh* scripts  
+
+```
+lssh
+```
+
+## lscap
+
+Capabilities search engine
+
+```
+lscap
 ```
 
 ## showCommands
@@ -50,32 +74,6 @@ cd secureScripts/scripts/showCommands
 
 
 > The application is based on an infinite loop and as a consequence brings with it an excessive consumption of CPU, we will have to look for alternatives
-
-## suidFinder
-
-Simple file search with SUID bit and GTFOBINS references
-
-```
-cd secureScripts/scripts/suidFinder && \
-./suidFinder.sh
-```
-
-## shFinder
-
-Simple search for *.sh scripts of privileged users with wrongly set permissions
-
-```
-cd secureScripts/scripts/shFinder && \
-./shFinder.sh
-```
-## capFinder
-
-Simple capabilities search engine
-
-```
-cd secureScripts/scripts/capFinder && \
-./capFinder.sh
-```
 
 ## netAliases
 Target recognition tools

@@ -17,6 +17,7 @@ openSSL
 .nf
 \f[C]
 git clone https://github.com/alohl669/secureScripts.git
+\&. secureScripts/aliases.sh
 \f[R]
 .fi
 .SS man Page
@@ -24,6 +25,33 @@ git clone https://github.com/alohl669/secureScripts.git
 .nf
 \f[C]
 man ./secureScripts.1
+\f[R]
+.fi
+.SS lssuid
+.PP
+List of files with SUID bit and GTFOBINS references
+.IP
+.nf
+\f[C]
+lssuid
+\f[R]
+.fi
+.SS lssh
+.PP
+List \f[I]sh\f[R] scripts
+.IP
+.nf
+\f[C]
+lssh
+\f[R]
+.fi
+.SS lscap
+.PP
+Capabilities search engine
+.IP
+.nf
+\f[C]
+lscap
 \f[R]
 .fi
 .SS showCommands
@@ -76,37 +104,6 @@ The application is based on an infinite loop and as a consequence brings
 with it an excessive consumption of CPU, we will have to look for
 alternatives
 .RE
-.SS suidFinder
-.PP
-Simple file search with SUID bit and GTFOBINS references
-.IP
-.nf
-\f[C]
-cd secureScripts/scripts/suidFinder && \[rs]
-\&./suidFinder.sh
-\f[R]
-.fi
-.SS shFinder
-.PP
-Simple search for *.sh scripts of privileged users with wrongly set
-permissions
-.IP
-.nf
-\f[C]
-cd secureScripts/scripts/shFinder && \[rs]
-\&./shFinder.sh
-\f[R]
-.fi
-.SS capFinder
-.PP
-Simple capabilities search engine
-.IP
-.nf
-\f[C]
-cd secureScripts/scripts/capFinder && \[rs]
-\&./capFinder.sh
-\f[R]
-.fi
 .SS netAliases
 .PP
 Target recognition tools

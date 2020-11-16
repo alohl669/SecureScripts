@@ -4,3 +4,4 @@ whiteList.txt
 *.pdf
 allPorts.txt
 main.sh
+pruebas*
